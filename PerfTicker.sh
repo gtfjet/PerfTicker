@@ -7,6 +7,6 @@ do
   git add README.md
   git commit -m "auto commit"
   git push
-	echo "Press [CTRL+C] to stop.."
-	sleep 10
+  echo "Press [CTRL+C] to stop.."
+  sleep 60
 done
