@@ -10,7 +10,7 @@ do
   else
     git pull
     /c/Python27/python.exe PerfModel.py
-    mv Home.md ../PerfTicker.wiki
+    tail -n 1 Home.md >> ../PerfTicker.wiki/Home.md
     cd ../PerfTicker.wiki
     git add Home.md
     git commit -m "auto commit"
