@@ -5,7 +5,7 @@ summary = '''
 # Current Status
 | Date    | Version | Cost   | Weight | Length  |
 |    -    |    -    |    -   |   -    |  -      |
-| YYY     | XXX     |  28    | 1.2    |    3.7  |  
+| YYY     | XXX     |  28    | 1.2    |    6.7  |  
 '''
 ver=subprocess.check_output(['git', 'rev-parse', 'HEAD'])
 print(ver[0:10])
