@@ -8,13 +8,14 @@ do
   if [ $LOCAL = $REMOTE ]; then
     echo "Up-to-date"
   else
-    echo "Diverged"
     git pull
     /c/Python27/python.exe PerfModel.py
-    git add README.md
+    mv Home.md ../PerfTicker.wiki
+    cd ../PerfTicker.wiki
+    git add Home.md
     git commit -m "auto commit"
     git push
-    echo "Press [CTRL+C] to stop.."
+    cd ../PerfTicker
   fi
-  sleep 60
+  sleep 1
 done
