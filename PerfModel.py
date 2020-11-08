@@ -2,7 +2,7 @@ import subprocess
 from datetime import datetime
 now = datetime.now()
 ver = subprocess.check_output(['git', 'rev-parse', 'HEAD'])
-dat = '| YYY | XXX |  28  |  1.2  |  2.678  |'
+dat = '| YYY | XXX |  28  |  1.2  |  2.678  |\n'
 dat = dat.replace('XXX',ver[0:7]);
 dat = dat.replace('YYY',str(now));
 print(dat)

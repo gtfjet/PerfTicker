@@ -11,12 +11,16 @@ do
     git pull
     # run model
     /c/Python27/python.exe PerfModel.py
-    cat status >> ../PerfTicker.wiki/Home.md
-    # go to wiki's repo and commit
+    # go to wiki's repo
     cd ../PerfTicker.wiki
+    git fetch
+    git pull
+    # add perf status to Home page
+    cat ../PerfTicker/status >> Home.md
     git add Home.md
     git commit -m "auto commit"
     git push
+    # go to back to main repo
     cd ../PerfTicker
   fi
   sleep 1
