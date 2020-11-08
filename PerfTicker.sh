@@ -9,8 +9,10 @@ do
     echo "Up-to-date"
   else
     git pull
+    # run model
     /c/Python27/python.exe PerfModel.py
-    tail -n 1 Home.md >> ../PerfTicker.wiki/Home.md
+    cat status >> ../PerfTicker.wiki/Home.md
+    # go to wiki's repo and commit
     cd ../PerfTicker.wiki
     git add Home.md
     git commit -m "auto commit"

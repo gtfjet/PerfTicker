@@ -1,17 +1,11 @@
 import subprocess
 from datetime import datetime
 now = datetime.now()
-summary = '''
-# Current Status
-| Date    | Version | Cost   | Weight | Length  |
-|    -    |    -    |    -   |   -    |  -      |
-| YYY     | XXX     |  28    | 1.2    |    6.9  |  
-'''
-ver=subprocess.check_output(['git', 'rev-parse', 'HEAD'])
-print(ver[0:10])
-summary=summary.replace('XXX',ver[0:10]);
-summary=summary.replace('YYY',str(now));
-print(summary)
-f = open("Home.md", "w")
-f.write(summary)
+ver = subprocess.check_output(['git', 'rev-parse', 'HEAD'])
+dat = '| YYY | XXX |  28  |  1.2  |  6.9  |'
+dat = dat.replace('XXX',ver[0:7]);
+dat = dat.replace('YYY',str(now));
+print(dat)
+f = open("status", "w")
+f.write(dat)
 f.close()
